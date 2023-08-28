@@ -187,26 +187,62 @@ void main(List<String> arguments) {
 
   //MAP
 
-  Map<String, dynamic> map1 = Map<String, dynamic>();
-  var map = {'zero': 0, 'one': 1, 'two': 2};
+  //Map<String, dynamic> map1 = Map<String, dynamic>();
+  //var map = {'zero': 0, 'one': 1, 'two': 2};
 
-  print(map1);
-  print(map);
+  //print(map1);
+  //print(map);
 
-  print("Obtém o valor pela chave");
-  print(map["one"]);
+  //print("Obtém o valor pela chave");
+  //print(map["one"]);
 
-  map.addAll({'ten': 10, 'eleven': 11});
-  print(map);
+  //map.addAll({'ten': 10, 'eleven': 11});
+  //print(map);
 
-  print("Se vazio");
-  print(map1.isEmpty);
-  print(map.isEmpty);
+  //print("Se vazio");
+  //print(map1.isEmpty);
+  //print(map.isEmpty);
 
-  print("Tamanho");
-  print(map.length);
+  //print("Tamanho");
+  //print(map.length);
 
-  print("Contém chave");
-  print(map.containsKey("eleven"));
-  print(map.containsKey("test"));
+  //print("Contém chave");
+  //print(map.containsKey("eleven"));
+  //print(map.containsKey("test"));
+
+  //CONSTANTES
+
+  //const String variavel = "ABC"; //não altera nenhum valor
+  //print(variavel);
+  //variavel = "CDE";
+
+  //DINAMICAS
+
+  //dynamic var1 = "ABC"; //não tem o autocomplete
+  //print(var1);
+  //var1 = 10;
+  //print(var1);
+  //var1 = DateTime(1999);
+  //print(var1);
+  //var1 = [10, true, "M"];
+  //print(var1);
+
+  //DATETIME
+
+  DateTime data1 = DateTime.now();
+  //data1 = DateTime.parse("2022-02-01 00:00:00");
+
+  print("Partes da data");
+  print(data1);
+  print(data1.day);
+  print(data1.month);
+  print(data1.year);
+  print(data1.hour);
+
+  print("Dia da semana");
+  print(data1.weekday);
+
+  print("Obtém o tamanho da String");
+  print(data1.add(Duration(days: 23)));
+  print(data1);
 }
