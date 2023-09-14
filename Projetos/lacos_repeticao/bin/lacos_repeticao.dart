@@ -1,17 +1,11 @@
-import 'dart:convert';
-import 'dart:io';
+import 'package:lacos_repeticao/utils.dart' as utils;
 
 void main(List<String> arguments) {
-  var opcao = "";
-  var acumulador = 0.0;
-  do {
-    print("Digite um número ou 'S' para sair");
-    var line = stdin.readLineSync(encoding: utf8);
-    opcao = line ?? "";
-    var numero = double.tryParse(opcao);
-    if (numero != null) {
-      acumulador = acumulador + numero;
-    }
-  } while (opcao != 'S');
-  print(acumulador);
+  List<double> numeros = [];
+  var line = utils.lerConsole("Digite um número ou 'S' para sair");
+  do { 
+    numeros.add(double.parse(line));
+    line = utils.lerConsole("Digite um número ou 'S' para sair");
+  } while (line != 'S');
+  print(utils.somaLista(numeros));
 }
